@@ -1,4 +1,5 @@
-const apikey = "aecfb34476c16098fddea4d1048d9c65"; //Weather API Key from [https://openweathermap.org/]
+//Weather API Key from [https://openweathermap.org/]
+const apikey = "aecfb34476c16098fddea4d1048d9c65";
 
 const weatherDataEl = document.getElementById("weather-data");
 const cityInputEl = document.getElementById("city-input");
@@ -22,7 +23,7 @@ async function getWeatherData(cityValue){
         const temperature = Math.round(data.main.temp);
         const description = data.weather[0].description;
         const icon = data.weather[0].icon;
-        
+
         const details = [
             `Feels like: ${Math.round(data.main.feels_like)}`,
             `Humidity: ${data.main.humidity}%`,
